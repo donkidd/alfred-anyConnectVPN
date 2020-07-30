@@ -9,6 +9,4 @@ prefix: vpn
 commands:
 * Connect: connect, conn, con
 * Disconnect: disconnect, dis
-
-## Known bugs
-Notifications are empty.
+* Status: status
