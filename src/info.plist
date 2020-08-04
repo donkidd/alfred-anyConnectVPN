@@ -159,17 +159,13 @@
 				<key>script</key>
 				<string>action="{query}"
 
-
-
 USERNAME=$(security find-internet-password -j com.d-kidd.alfred.workflow.cisco.anyconnect | awk -F\" '/acct"&lt;blob&gt;/ {print $4}' )
 
 PASSWORD=$(security find-internet-password -j com.d-kidd.alfred.workflow.cisco.anyconnect -w)
 
 HOST=$(security find-internet-password -j com.d-kidd.alfred.workflow.cisco.anyconnect | awk -F\" '/srvr"&lt;blob&gt;/ {print $4}' )
 
-GROUP=AdminVPN
-
-./start_vpn.sh $HOST $GROUP $USERNAME $PASSWORD</string>
+./start_vpn.sh $HOST $USERNAME $PASSWORD</string>
 				<key>scriptargtype</key>
 				<integer>0</integer>
 				<key>scriptfile</key>
@@ -311,7 +307,8 @@ GROUP=AdminVPN
 		</dict>
 	</array>
 	<key>readme</key>
-	<string></string>
+	<string>Basic Workflow I created to allow easy working with Cisco AnyConnect VPN client.  
+Currently works with version 4.8.00175 on OS X 10.15.4</string>
 	<key>uidata</key>
 	<dict>
 		<key>15299C7A-CDEA-4359-8898-446F2892DB7C</key>
@@ -331,9 +328,9 @@ GROUP=AdminVPN
 		<key>3DED2681-0F0B-4029-B19D-5FE1DB977FB1</key>
 		<dict>
 			<key>xpos</key>
-			<integer>285</integer>
+			<integer>360</integer>
 			<key>ypos</key>
-			<integer>425</integer>
+			<integer>385</integer>
 		</dict>
 		<key>A70A4E1E-712E-4575-967A-0AA64960904D</key>
 		<dict>
@@ -364,8 +361,6 @@ GROUP=AdminVPN
 			<integer>210</integer>
 		</dict>
 	</dict>
-	<key>variablesdontexport</key>
-	<array/>
 	<key>version</key>
 	<string>1.0.0</string>
 	<key>webaddress</key>
